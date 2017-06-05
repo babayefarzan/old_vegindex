@@ -10,20 +10,12 @@ import os
 from roilist import ROIList
 from roitimeseries import ROITimeSeries
 from gcctimeseries import GCCTimeSeries
-import config
-
-# set vars
-
-# you can set the archive directory to
-# somewhere else for testing
-archive_dir = '/data/archive'
-config.archive_dir = archive_dir
+from . import config
 
 
 # ********** Public Functions **************
 
 def daterange2(start_date, end_date, nday):
-
     """
     make alternate daterange() function which uses fixed days
     of year between start_date and end_date.  In other words
@@ -35,14 +27,14 @@ def daterange2(start_date, end_date, nday):
     year_end = end_date.year
 
     # loop over years and always use same doy intervals ...
-    for iyear in range(year_start, year_end+1, 1):
+    for iyear in range(year_start, year_end + 1, 1):
 
         # if this is the first year reset the start
         # date to the beginning of the first nday period
         # which includes start_date
         if iyear == year_start:
             doy_start = (start_date - date(iyear, 1, 1)).days + 1
-            n = (doy_start - 1)/nday
+            n = (doy_start - 1) / nday
             new_doy_start = n * nday + 1
             dstart = date(iyear, 1, 1) + timedelta(new_doy_start - 1)
         else:
@@ -54,7 +46,7 @@ def daterange2(start_date, end_date, nday):
         if iyear == year_end:
             doy_last = (end_date -
                         date(iyear, 1, 1)).days + 1
-            n = (doy_last - 1)/nday
+            n = (doy_last - 1) / nday
             new_doy_last = n * nday + 1
             dlast = date(iyear, 1, 1) + timedelta(new_doy_last - 1)
 
@@ -64,7 +56,7 @@ def daterange2(start_date, end_date, nday):
             dlast = date(iyear, 12, 31)
 
         # for this year yield the first day of the next nday period
-        for n in range(0, doy_last+1, nday):
+        for n in range(0, doy_last + 1, nday):
             dtval = dstart + timedelta(n)
             if ((dtval + timedelta(nday)) > start_date) and (dtval <= dlast):
                 yield dtval
