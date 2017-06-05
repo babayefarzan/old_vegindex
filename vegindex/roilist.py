@@ -67,7 +67,7 @@ class ROIList(object):
     def __init__(self, site='', roitype='', descrip='', sequence_number=0,
                  owner=''):
         """
-        create ROIList object which matches database 
+        create ROIList object which matches database
 
         Here's a proposed sample ROIList file:
 
@@ -95,6 +95,21 @@ class ROIList(object):
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
         self.descrip = descrip
+
+        # preform some sanity checks
+        if roitype != "":
+            try:
+                config.ROITypes.index(roitype)
+                self.roitype = roitype
+            except ValueError:
+                sys.stderr.write("Unknown Veg Type in CSV\n")
+                raise ValueError
+
+        # sequence number should be decimal
+        try:
+            self.sequence_number = int(sequence_number)
+        except ValueError:
+            print "CSV ROI ID Number not valid"
 
         # initially create the object with an empty list
         # of masks
@@ -302,14 +317,14 @@ class ROIList(object):
         for imask, mask in enumerate(self.masks):
             if mask['end_dt'] <= mask['start_dt']:
                 error_list.append({'valid': False,
-                                   'mask': imask+1,
+                                   'mask': imask + 1,
                                    'msg':
                                    'End date-time is before start datetime'})
 
             if imask > 0:
                 if mask['start_dt'] < lastmask['end_dt']:
                     error_list.append({'valid': False,
-                                       'mask': imask+1,
+                                       'mask': imask + 1,
                                        'msg': 'Overlaps previous mask.'})
 
             lastmask = mask
