@@ -11,7 +11,10 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-    # TODO: put package requirements here
+    'Pillow>=3.1.1',
+    'pyephem>=3.7.6.0',
+    'configparser>=3.5.0',
+    'requests'
 ]
 
 test_requirements = [
@@ -33,7 +36,7 @@ setup(
                  'vegindex'},
     entry_points={
         'console_scripts': [
-            'vegindex=vegindex.cli:main'
+            'generate_roi_timeseries=vegindex.generate_roi_timeseries:main'
         ]
     },
     include_package_data=True,
@@ -56,5 +59,5 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     test_suite='tests',
-    tests_require=test_requirements
+    tests_require=test_requirements,
 )
