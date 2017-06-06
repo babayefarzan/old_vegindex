@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -14,7 +14,7 @@ requirements = [
     'Pillow>=3.1.1',
     'pyephem>=3.7.6.0',
     'configparser>=3.5.0',
-    'requests'
+    'requests>=2.17.3'
 ]
 
 test_requirements = [
@@ -36,7 +36,8 @@ setup(
                  'vegindex'},
     entry_points={
         'console_scripts': [
-            'generate_roi_timeseries=vegindex.generate_roi_timeseries:main'
+            'generate_roi_timeseries=vegindex.generate_roi_timeseries:main',
+            'generate_summary_timeseries=vegindex.generate_summary_timeseries.main'
         ]
     },
     include_package_data=True,
@@ -52,11 +53,6 @@ setup(
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
     ],
     test_suite='tests',
     tests_require=test_requirements,
