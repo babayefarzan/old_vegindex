@@ -31,7 +31,6 @@ setup(
     url='https://github.com/tmilliman/vegindex',
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    package_data={"vegindex": "src/sample_data"},
     entry_points={
         'console_scripts': [
             'generate_roi_timeseries=vegindex.generate_roi_timeseries:main',
