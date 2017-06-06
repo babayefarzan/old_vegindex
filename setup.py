@@ -29,11 +29,9 @@ setup(
     author="Thomas Milliman",
     author_email='thomas.milliman@unh.edu',
     url='https://github.com/tmilliman/vegindex',
-    packages=[
-        'vegindex',
-    ],
-    package_dir={'vegindex':
-                 'vegindex'},
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    package_data={"vegindex": "src/sample_data"},
     entry_points={
         'console_scripts': [
             'generate_roi_timeseries=vegindex.generate_roi_timeseries:main',
@@ -51,7 +49,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
     ],
     test_suite='tests',

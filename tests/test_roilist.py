@@ -13,8 +13,8 @@ import pytest
 from vegindex import roilist
 from vegindex import config
 
-MODULE_DIR = os.path.dirname(roilist.__file__)
-SAMPLE_DATA_DIR = os.path.join(os.path.dirname(MODULE_DIR),
+# MODULE_DIR = os.path.dirname(vegindex.__file__)
+SAMPLE_DATA_DIR = os.path.join(os.path.dirname(__file__),
                                'sample_data')
 
 
