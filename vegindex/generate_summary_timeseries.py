@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -54,6 +53,7 @@ import numpy as np
 from ConfigParser import SafeConfigParser
 
 import vegindex as vi
+from .quantile import quantile
 
 # set vars
 
@@ -410,14 +410,14 @@ def main():
             b_std = np.nanstd(b_dn_vals)
             gcc_mean = np.nanmean(gcc_vals)
             gcc_std = np.nanstd(gcc_vals)
-            gcc_50 = vi.quantile(gcc_vals, .5)
-            gcc_75 = vi.quantile(gcc_vals, .75)
-            gcc_90 = vi.quantile(gcc_vals, .9)
+            gcc_50 = quantile(gcc_vals, .5)
+            gcc_75 = quantile(gcc_vals, .75)
+            gcc_90 = quantile(gcc_vals, .9)
             rcc_mean = np.nanmean(rcc_vals)
             rcc_std = np.nanstd(rcc_vals)
-            rcc_50 = vi.quantile(rcc_vals, .5)
-            rcc_75 = vi.quantile(rcc_vals, .75)
-            rcc_90 = vi.quantile(rcc_vals, .9)
+            rcc_50 = quantile(rcc_vals, .5)
+            rcc_75 = quantile(rcc_vals, .75)
+            rcc_90 = quantile(rcc_vals, .9)
             max_solar_elev = max(solar_elev_vals)
             snow_flag = ND_INT
             outlierflag_gcc_mean = ND_INT
