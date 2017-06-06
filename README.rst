@@ -13,25 +13,22 @@ vegindex
         :target: https://vegindex.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/tmilliman/vegindex/shield.svg
-     :target: https://pyup.io/repos/github/tmilliman/vegindex/
-     :alt: Updates
 
-
-Python package to generate vegetation index timeseries
+Python package to generate vegetation index timeseries from a directory of PhenoCam images.
 
 
 * Free software: MIT license
 * Documentation: https://vegindex.readthedocs.io.
 
-
-Features
---------
-
-* TODO
+The PhenoCam Network
+--------------------
+The PhenoCam Network is a project designed to study the seasonal variations (Phenology) of vegetation.  The project website is at `https://phenocam.sr.unh.edu/ <https://phenocam.sr.unh.edu>`_.  The network consists of many cameras collecting images of various types of vegetation.  By analysing the images we can quantify the seasonal changes at a particular site.
 
 Credits
 ---------
+
+The algorithms used in in this package have been discussed in numerous publications.  You can
+find a list of publications for the PhenoCam Project `here <https://phenocam.sr.unh.edu/webcam/publications/>`_.
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
