@@ -37,7 +37,7 @@ setup(
     entry_points={
         'console_scripts': [
             'generate_roi_timeseries=vegindex.generate_roi_timeseries:main',
-            'generate_summary_timeseries=vegindex.generate_summary_timeseries.main'
+            'generate_summary_timeseries=vegindex.generate_summary_timeseries:main'
         ]
     },
     include_package_data=True,
