@@ -36,8 +36,8 @@ are some of the resources I used to setup the package:
 
 * `Packaging and Distributing Projects <https://packaging.python.org/distributing/>`_
 * `How To Package Your Python Code <https://python-packaging.readthedocs.io/en/latest/>`_
-* Open Sourcing a Python Project the Right Way: https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
-* Cookiecutter: https://github.com/audreyr/cookiecutter
-* audreyr/cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
-* Packaging a python library: https://blog.ionelmc.ro/2014/05/25/python-packaging/
-* ionelmc/cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
+* `Open Sourcing a Python Project the Right Way <https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/>`_
+* `Cookiecutter <https://github.com/audreyr/cookiecutter>`_
+* `audreyr/cookiecutter-pypackage <https://github.com/audreyr/cookiecutter-pypackage/>`_
+* `Packaging a python library <https://blog.ionelmc.ro/2014/05/25/python-packaging/>`_
+* `ionelmc/cookiecutter-pylibrary <https://github.com/ionelmc/cookiecutter-pylibrary>`_
