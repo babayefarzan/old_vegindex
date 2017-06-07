@@ -30,8 +30,13 @@ Credits
 The algorithms used in in this package have been discussed in numerous publications.  You can
 find a list of publications for the PhenoCam Project `here <https://phenocam.sr.unh.edu/webcam/publications/>`_.
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
+This package was assembled without much experience in python packaging.  Here
+are some fo the resources I used to setup the package:
+
+.. _Packaging and Distributing Projects: https://packaging.python.org/distributing/
+.. _How To Package Your Python Code: https://python-packaging.readthedocs.io/en/latest/
+.. _Open Sourcing a Python Project the Right Way: https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
+.. _Packaging a python library: https://blog.ionelmc.ro/2014/05/25/python-packaging/
