@@ -32,11 +32,12 @@ find a list of publications for the PhenoCam Project `here <https://phenocam.sr.
 
 
 This package was assembled without much experience in python packaging.  Here
-are some fo the resources I used to setup the package:
+are some of the resources I used to setup the package:
 
-* _Packaging and Distributing Projects: https://packaging.python.org/distributing/
-* _How To Package Your Python Code: https://python-packaging.readthedocs.io/en/latest/
-* _Open Sourcing a Python Project the Right Way: https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
-* _Cookiecutter: https://github.com/audreyr/cookiecutter
-* _audreyr/cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
-* _Packaging a python library: https://blog.ionelmc.ro/2014/05/25/python-packaging/
+* `Packaging and Distributing Projects <https://packaging.python.org/distributing/>`_
+* `How To Package Your Python Code <https://python-packaging.readthedocs.io/en/latest/>`_
+* Open Sourcing a Python Project the Right Way: https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
+* Cookiecutter: https://github.com/audreyr/cookiecutter
+* audreyr/cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
+* Packaging a python library: https://blog.ionelmc.ro/2014/05/25/python-packaging/
+* ionelmc/cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
